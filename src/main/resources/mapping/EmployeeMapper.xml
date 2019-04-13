@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="main.java.com.dao.EmployeeMapper">
+  <resultMap id="BaseResultMap" type="main.java.com.po.Employee">
+    <result column="ID" jdbcType="DECIMAL" property="id" />
+    <result column="NAME" jdbcType="VARCHAR" property="name" />
+    <result column="EMAIL" jdbcType="VARCHAR" property="email" />
+    <result column="HIREDATE" jdbcType="TIMESTAMP" property="hiredate" />
+    <result column="SALARY" jdbcType="DECIMAL" property="salary" />
+  </resultMap>
+  <insert id="insert" parameterType="main.java.com.po.Employee">
+    insert into EMPLOYEE (ID, NAME, EMAIL, 
+      HIREDATE, SALARY)
+    values (#{id,jdbcType=DECIMAL}, #{name,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, 
+      #{hiredate,jdbcType=TIMESTAMP}, #{salary,jdbcType=DECIMAL})
+  </insert>
+  <insert id="insertSelective" parameterType="main.java.com.po.Employee">
+    insert into EMPLOYEE
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        ID,
+      </if>
+      <if test="name != null">
+        NAME,
+      </if>
+      <if test="email != null">
+        EMAIL,
+      </if>
+      <if test="hiredate != null">
+        HIREDATE,
+      </if>
+      <if test="salary != null">
+        SALARY,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=DECIMAL},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null">
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="hiredate != null">
+        #{hiredate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="salary != null">
+        #{salary,jdbcType=DECIMAL},
+      </if>
+    </trim>
+  </insert>
+  <resultMap id="BaseResultMap" type="main.java.com.po.Employee">
+    <result column="ID" jdbcType="DECIMAL" property="id" />
+    <result column="NAME" jdbcType="VARCHAR" property="name" />
+    <result column="EMAIL" jdbcType="VARCHAR" property="email" />
+    <result column="HIREDATE" jdbcType="TIMESTAMP" property="hiredate" />
+    <result column="SALARY" jdbcType="DECIMAL" property="salary" />
+  </resultMap>
+  <insert id="insert" parameterType="main.java.com.po.Employee">
+    insert into EMPLOYEE (ID, NAME, EMAIL, 
+      HIREDATE, SALARY)
+    values (#{id,jdbcType=DECIMAL}, #{name,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, 
+      #{hiredate,jdbcType=TIMESTAMP}, #{salary,jdbcType=DECIMAL})
+  </insert>
+  <insert id="insertSelective" parameterType="main.java.com.po.Employee">
+    insert into EMPLOYEE
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        ID,
+      </if>
+      <if test="name != null">
+        NAME,
+      </if>
+      <if test="email != null">
+        EMAIL,
+      </if>
+      <if test="hiredate != null">
+        HIREDATE,
+      </if>
+      <if test="salary != null">
+        SALARY,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=DECIMAL},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null">
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="hiredate != null">
+        #{hiredate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="salary != null">
+        #{salary,jdbcType=DECIMAL},
+      </if>
+    </trim>
+  </insert>
+</mapper>

@@ -1,0 +1,9 @@
+# git clone url
+https://github.com/shigang-sg/spring_boot_generator.git
+
+#gitHub:账户
+1689406287@qq.com
+sg9215551062
+
+#maven 启动
+mybatis-generator:generate -e

@@ -55,9 +55,8 @@
             <property name="trimStrings" value="true"/>
         </javaClientGenerator>
         <!-- 指定数据库表 -->
-        <table tableName="s_emp" domainObjectName="Emp"
+        <table tableName="employee" domainObjectName="Employee"
                enableCountByExample="false" enableUpdateByExample="false"
-               enableDeleteByExample="false" enableSelectByExample="false"
-               selectByExampleQueryId="false"></table>
+               enableDeleteByExample="false" enableSelectByExample="false"></table>
     </context>
 </generatorConfiguration>
